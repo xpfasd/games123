@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>游戏中心 - Game Center</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            color: white;
+        }
+
+        .header h1 {
+            font-size: 3rem;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            opacity: 0.9;
+        }
+
+        .games-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            padding: 20px 0;
+        }
+
+        .game-card {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            text-decoration: none;
+            color: #333;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+            transition: all 0.3s ease;
+            border: 2px solid transparent;
+        }
+
+        .game-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0,0,0,0.3);
+            border-color: #667eea;
+        }
+
+        .game-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 12px;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin-bottom: 15px;
+            color: white;
+        }
+
+        .game-title {
+            font-size: 1.4rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: #2c3e50;
+        }
+
+        .game-description {
+            color: #7f8c8d;
+            font-size: 0.95rem;
+            line-height: 1.4;
+        }
+
+        .play-button {
+            display: inline-block;
+            background: linear-gradient(45deg, #667eea, #764ba2);
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 500;
+            margin-top: 15px;
+            transition: all 0.3s ease;
+        }
+
+        .game-card:hover .play-button {
+            background: linear-gradient(45deg, #764ba2, #667eea);
+            transform: scale(1.05);
+        }
+
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2rem;
+            }
+            
+            .games-grid {
+                grid-template-columns: 1fr;
+                gap: 20px;
+            }
+            
+            .game-card {
+                padding: 20px;
+            }
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            margin-top: 40px;
+            opacity: 0.8;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>🎮 游戏中心</h1>
+            <p>精选休闲小游戏，点击即可开始游戏！</p>
+        </div>
+
+        <div class="games-grid">
+            <a href="000908_panda-bubble-shooter/index.html" class="game-card">
+                <div class="game-icon">🐼</div>
+                <div class="game-title">熊猫泡泡射击</div>
+                <div class="game-description">可爱的熊猫泡泡射击游戏，消除相同颜色的泡泡，体验轻松愉快的休闲时光。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="000854_gobble/index.html" class="game-card">
+                <div class="game-icon">🍽️</div>
+                <div class="game-title">Gobble</div>
+                <div class="game-description">有趣的吞噬类游戏，通过策略和技巧来完成各种挑战关卡。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="000458_sandtris/index.html" class="game-card">
+                <div class="game-icon">🏗️</div>
+                <div class="game-title">沙粒俄罗斯方块</div>
+                <div class="game-description">创新的沙粒物理俄罗斯方块，体验不一样的经典益智游戏玩法。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="000432_rescue-the-fish/index.html" class="game-card">
+                <div class="game-icon">🐟</div>
+                <div class="game-title">救救小鱼</div>
+                <div class="game-description">拯救困在各种危险中的小鱼，通过巧妙的操作帮助它们回到安全的水中。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="000277_jump-only/index.html" class="game-card">
+                <div class="game-icon">🦘</div>
+                <div class="game-title">只能跳跃</div>
+                <div class="game-description">简单却富有挑战的跳跃游戏，测试你的反应能力和时机把握。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="000239_happy-glass/index.html" class="game-card">
+                <div class="game-icon">🥛</div>
+                <div class="game-title">开心杯子</div>
+                <div class="game-description">画线引导水流，让杯子装满水，简单有趣的物理解谜游戏。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="000181_Emoji-Sort-Master/index.html" class="game-card">
+                <div class="game-icon">😊</div>
+                <div class="game-title">表情分类大师</div>
+                <div class="game-description">将相同的表情进行分类整理，锻炼你的观察力和逻辑思维能力。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="000461_save-dogogo/index.html" class="game-card">
+                <div class="game-icon">🐕</div>
+                <div class="game-title">救救小狗</div>
+                <div class="game-description">帮助可爱的小狗摆脱各种困境，用你的智慧解决难题。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="000050_blumgi-bloom/index.html" class="game-card">
+                <div class="game-icon">🌸</div>
+                <div class="game-title">花朵绽放</div>
+                <div class="game-description">美丽的花园养成游戏，让各种花朵在你的照料下绽放光彩。</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+
+            <a href="pathing/pathing/index.html" class="game-card">
+                <div class="game-icon">🌸</div>
+                <div class="game-title">pathing</div>
+                <div class="game-description">pathing小游戏</div>
+                <div class="play-button">开始游戏</div>
+            </a>
+        </div>
+
+        <div class="footer">
+            <p>享受游戏时光 | 所有游戏均为免费游玩</p>
+        </div>
+    </div>
+</body>
+</html> 
